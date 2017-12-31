@@ -28,7 +28,9 @@ class Animation extends React.Component {
     const progressBar = document.getElementById('progress-bar');
     progressBar.className = 'off on';
     setTimeout(() => progressBar.className = 'off', 1100);
-  }
+  };
+
+  componentWillUpdate() { this.showLoadingBar() };
 
   render() {
     return (
